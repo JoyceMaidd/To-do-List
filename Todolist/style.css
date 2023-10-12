@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(120deg,#f6d365, #f68566);
+    color: white;
+    font-family:'Poppins',sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 2rem;
+}
+header,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: 0;
+    background: white;
+}
+form button{
+    color:#f68566;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+form button:hover{
+    background:#f68566;
+    color:white;
+}
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 30%; 
+    list-style: none;
+}
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black; 
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.todo li{
+    flex: 1;
+}
+.check-btn, .trash-btn{
+    background:#f68566;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.check-btn{
+    background: rgb(131, 212, 131);
+}
+.fa-trash, .fa-check{
+     pointer-events: none;
+}
+.Completed{
+    text-decoration: line-through ;
+    opacity: 0.5;
+}
+.delete{
+    transition: all 0.3 s ease;
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color:#f68566;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select::after{
+    content: "\25bc";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #f68566;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    background: white;
+    color: #f68566;
+}
